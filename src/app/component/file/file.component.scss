@@ -1,0 +1,22 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+input#img {
+  text-align: center;
+  &::-webkit-file-upload-button {
+    display: none;
+  }
+}
+.canvas-container {
+  position: relative;
+  #canvasImage {
+    position: absolute;
+  }
+  #canvasCursor {
+    position: relative;
+  }
+}
