@@ -37,4 +37,8 @@ export class FileService {
   public getFiles(): Observable<Image[]> {
     return this.http.get<Image[]>(`${this.URL_BACKEND}/liste`);
   }
+
+  public deleteFile(id: number): Observable<any> {
+    return this.http.delete(`${this.URL_BACKEND}/${id}`);
+  }
 }

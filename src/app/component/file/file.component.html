@@ -14,18 +14,19 @@
     </canvas>
   </div>
   <div>
-    <button type="button" class="btn btn-secondary m-2" (click)="cancel()" [disabled]="!rectIsSet">Cancel</button>
-    <button type="button" class="btn btn-primary m-2" (click)="crop()" [disabled]="!rectIsSet">Apply crop</button>
-    <button type="button" class="btn btn-success m-2" (click)="save()" [disabled]="!image.src">Save</button>
+    <button type="button" class="btn btn-secondary m-2" (click)="cancel()" [disabled]="!rectIsSet || !file">Cancel</button>
+    <button type="button" class="btn btn-primary m-2" (click)="crop()" [disabled]="!rectIsSet || !file">Apply crop</button>
+    <button type="button" class="btn btn-success m-2" (click)="save()" [disabled]="!image.src || !file">Save</button>
   </div>
   <section *ngIf="imagesSave.length > 0" class="m-2 column">
     <h4 class="card-title">Liste</h4>
     <div class="row">
       <div *ngFor="let image of imagesSave" class="card m-2" style="width: 10rem;">
         <img class="card-img-top" [src]="image.src" alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body d-flex flex-column justify-content-between">
           <h5 class="card-title">Id : {{ image.id }}</h5>
           <p class="card-text">Name file : {{ image.name }}</p>
+          <button type="button" class="btn btn-danger" (click)="delete(image.id)">Delete</button>
         </div>
       </div>
     </div>

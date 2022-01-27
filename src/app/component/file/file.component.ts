@@ -7,6 +7,7 @@ import {Position} from 'src/app/model/Position.model';
 import {Size} from 'src/app/model/Size.model';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {WebsocketService} from 'src/app/service/websocket.service';
+import { Message } from 'stompjs';
 
 @Component({
   selector: 'app-file',
@@ -19,7 +20,7 @@ export class FileComponent implements OnInit, AfterViewInit {
   @ViewChild('canvasCursor') canvasCursor!: ElementRef<HTMLCanvasElement>;
   private ctxImage!: CanvasRenderingContext2D | null;
   private ctxCursor!: CanvasRenderingContext2D | null;
-  private file!: File;
+  public file: File | undefined;
   public image!: HTMLImageElement;
   public moving: boolean = false;
   public rectIsSet: boolean = false;
@@ -46,8 +47,8 @@ export class FileComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.image = new Image();
     this.initializeList();
-    this.ws.onEvent().subscribe(e => {
-      console.log(e);
+    this.ws.onEvent().subscribe((message: Message) => {
+      console.log(message.body);
     });
   }
 
@@ -59,15 +60,7 @@ export class FileComponent implements OnInit, AfterViewInit {
    */
   private initializeList(): void {
     this.fileService.getFiles().subscribe((images: Image[]) => {
-      images.forEach((image: Image) => {
-        const src: string = 'data:image/png;base64,' + image.data;
-        const srcSafe: SafeUrl = this.sanitizer.bypassSecurityTrustUrl(src);
-        this.imagesSave.push({
-          id: image.id,
-          name: image.fileName,
-          src: srcSafe
-        });
-      });
+      images.forEach((image: Image) => this.pushImg(image));
     });
   }
 
@@ -88,8 +81,9 @@ export class FileComponent implements OnInit, AfterViewInit {
    * @memberof FileComponent
    */
   public handleFileInput(e: any): void {
-    if (e.target.files.item(0) !== null) {
+    if (e.target.files.length > 0) {
       this.canvasService.clear([this.canvasImage, this.canvasCursor]);
+      this.rectIsSet = false;
       const files: FileList = e.target.files;
       this.file = files.item(0)!;
       this.image.src = URL.createObjectURL(files[0]);
@@ -224,12 +218,48 @@ export class FileComponent implements OnInit, AfterViewInit {
   public save(): void {
     this.canvasImage.nativeElement.toBlob((blob: Blob | null) => {
       this.fileService
-        .saveFile(blob!, this.file.name)
+        .saveFile(blob!, this.file!.name)
         .pipe(take(1))
         .subscribe((image: Image) => {
           this.input.nativeElement.value = '';
           this.canvasService.clear([this.canvasImage]);
+          this.pushImg(image);
         });
     });
+  }
+
+  /**
+   * insert new Image to display array
+   *
+   * @private
+   * @param {Image} image
+   * @memberof FileComponent
+   */
+  private pushImg(image: Image): void {
+    const src: string = 'data:image/png;base64,' + image.data;
+    const srcSafe: SafeUrl = this.sanitizer.bypassSecurityTrustUrl(src);
+    this.imagesSave.push({
+      id: image.id,
+      name: image.fileName,
+      src: srcSafe
+    });
+  }
+
+  /**
+   * onClick delete button
+   *
+   * @param {number} id
+   * @memberof FileComponent
+   */
+  public delete(id: number): void {
+    this.fileService
+      .deleteFile(id)
+      .pipe(take(1))
+      .subscribe(() => {
+        this.imagesSave.forEach((image: Image, index: number) => {
+          if (image.id === id) this.imagesSave.splice(index, 1);
+        });
+        console.log('file deleted');
+      });
   }
 }

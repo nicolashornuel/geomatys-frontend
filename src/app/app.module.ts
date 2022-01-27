@@ -18,7 +18,7 @@ import { WebsocketService } from './service/websocket.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
-  ],
+    ],
   providers: [StompRService, WebsocketService],
   bootstrap: [AppComponent]
 })

@@ -4,7 +4,6 @@ import * as SockJS from 'sockjs-client';
 import {Message} from '@stomp/stompjs';
 import {Observable} from 'rxjs';
 import {environment} from 'src/environments/environment.prod';
-import { Image} from 'src/app/model/Image.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +23,12 @@ export class WebsocketService {
 
   onEvent(): Observable<Message> {
     this.init();
-    return this.stompService.subscribe('/topic/uploadFile');
+    return this.stompService.subscribe("/topic/uploadFile")
+
   }
 
   onPublish(message: string) {
-    this.stompService.publish('/app/uploadFile',message); // /app/stomp  /app/uploadFile
+    this.stompService.publish("/app/uploadFile", message);
   }
 
 
@@ -36,8 +36,13 @@ export class WebsocketService {
     const provider = () => {
       return new SockJS(`${this.URL_BACKEND}/stomp`);
     };
+
     const config = new StompConfig();
 
+    config.headers = {
+      login: 'guest',
+      passcode: 'guest'
+    },
     config.url = provider;
     config.heartbeat_in = 0;
     config.heartbeat_out = 0;

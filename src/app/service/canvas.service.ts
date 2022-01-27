@@ -1,12 +1,12 @@
 import {ElementRef, Injectable} from '@angular/core';
 import {Position} from '../model/Position.model';
-import {Rectangle} from '../model/Rectangle.model';
 import {Size} from '../model/Size.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CanvasService {
+
 
 
   constructor() {}
