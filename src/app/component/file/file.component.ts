@@ -8,6 +8,8 @@ import {Size} from 'src/app/model/Size.model';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {WebsocketService} from 'src/app/service/websocket.service';
 import { Message } from 'stompjs';
+import { AlertBarComponent } from '../alert-bar/alert-bar.component';
+import {EventBrokerType} from 'src/app/model/EventBrockerType.enum'
 
 @Component({
   selector: 'app-file',
@@ -21,7 +23,7 @@ export class FileComponent implements OnInit, AfterViewInit {
   private ctxImage!: CanvasRenderingContext2D | null;
   private ctxCursor!: CanvasRenderingContext2D | null;
   public file: File | undefined;
-  public image!: HTMLImageElement;
+  public imageInputFile!: HTMLImageElement;
   public moving: boolean = false;
   public rectIsSet: boolean = false;
   private MAX_WIDTH: number = 500;
@@ -36,7 +38,8 @@ export class FileComponent implements OnInit, AfterViewInit {
     private fileService: FileService,
     private canvasService: CanvasService,
     private sanitizer: DomSanitizer,
-    private ws: WebsocketService
+    private ws: WebsocketService,
+    private alert: AlertBarComponent
   ) {}
 
   /**
@@ -45,10 +48,20 @@ export class FileComponent implements OnInit, AfterViewInit {
    * @memberof FileComponent
    */
   ngOnInit(): void {
-    this.image = new Image();
+    this.imageInputFile = new Image();
     this.initializeList();
+    this.listenServer();
+  }
+
+  private listenServer(): void {
     this.ws.onEvent().subscribe((message: Message) => {
-      console.log(message.body);
+      const msg = JSON.parse(message.body);
+      if (msg.event === EventBrokerType.CREATE) {
+        this.alert.info(`New File uploaded at ${msg.time}`, `File name : ${msg.content}`);
+      } else if (msg.event === EventBrokerType.DELETE) {
+        this.alert.danger(`New File deleted at ${msg.time}`, `File id : ${msg.content}`);
+      }
+      this.initializeList()
     });
   }
 
@@ -86,10 +99,10 @@ export class FileComponent implements OnInit, AfterViewInit {
       this.rectIsSet = false;
       const files: FileList = e.target.files;
       this.file = files.item(0)!;
-      this.image.src = URL.createObjectURL(files[0]);
-      this.image.onload = () => {
-        const size = this.sizeLogic(this.image.width, this.image.height);
-        this.ctxImage!.drawImage(this.image, 0, 0, size.w, size.h);
+      this.imageInputFile.src = URL.createObjectURL(files[0]);
+      this.imageInputFile.onload = () => {
+        const size = this.sizeLogic(this.imageInputFile.width, this.imageInputFile.height);
+        this.ctxImage!.drawImage(this.imageInputFile, 0, 0, size.w, size.h);
       };
     }
   }
@@ -186,7 +199,7 @@ export class FileComponent implements OnInit, AfterViewInit {
     const ratio = this.getRatio();
     const size: Size = this.sizeLogic(this.size.w * ratio, this.size.h * ratio);
     this.ctxImage!.drawImage(
-      this.image,
+      this.imageInputFile,
       this.position.x * ratio,
       this.position.y * ratio,
       this.size.w * ratio,
@@ -205,8 +218,8 @@ export class FileComponent implements OnInit, AfterViewInit {
    */
   public cancel(): void {
     this.canvasService.clear([this.canvasCursor]);
-    const size = this.sizeLogic(this.image.width, this.image.height);
-    this.ctxImage!.drawImage(this.image, 0, 0, size.w, size.h);
+    const size = this.sizeLogic(this.imageInputFile.width, this.imageInputFile.height);
+    this.ctxImage!.drawImage(this.imageInputFile, 0, 0, size.w, size.h);
     this.rectIsSet = false;
   }
 
@@ -221,6 +234,7 @@ export class FileComponent implements OnInit, AfterViewInit {
         .saveFile(blob!, this.file!.name)
         .pipe(take(1))
         .subscribe((image: Image) => {
+          this.ws.onPublish(JSON.stringify({event: EventBrokerType.CREATE, content:image.name}));
           this.input.nativeElement.value = '';
           this.canvasService.clear([this.canvasImage]);
           this.pushImg(image);
@@ -240,7 +254,7 @@ export class FileComponent implements OnInit, AfterViewInit {
     const srcSafe: SafeUrl = this.sanitizer.bypassSecurityTrustUrl(src);
     this.imagesSave.push({
       id: image.id,
-      name: image.fileName,
+      name: image.name,
       src: srcSafe
     });
   }
@@ -256,10 +270,10 @@ export class FileComponent implements OnInit, AfterViewInit {
       .deleteFile(id)
       .pipe(take(1))
       .subscribe(() => {
+        this.ws.onPublish(JSON.stringify({event: EventBrokerType.DELETE, content:id}));
         this.imagesSave.forEach((image: Image, index: number) => {
           if (image.id === id) this.imagesSave.splice(index, 1);
         });
-        console.log('file deleted');
       });
   }
 }

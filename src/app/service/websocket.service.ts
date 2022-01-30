@@ -20,25 +20,20 @@ export class WebsocketService {
     }
   }
 
-
-  onEvent(): Observable<Message> {
+  onEvent(): Observable<any> {
     this.init();
-    return this.stompService.subscribe("/topic/uploadFile")
-
+    return this.stompService.subscribe("/topic/image")
   }
 
   onPublish(message: string) {
-    this.stompService.publish("/app/uploadFile", message);
+    this.stompService.publish("/app/image", message);
   }
-
 
   private stompConfig(): StompConfig {
     const provider = () => {
       return new SockJS(`${this.URL_BACKEND}/stomp`);
     };
-
     const config = new StompConfig();
-
     config.headers = {
       login: 'guest',
       passcode: 'guest'

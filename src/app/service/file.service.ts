@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
 import {environment} from 'src/environments/environment.prod';
 import {HttpClient} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import { Image} from 'src/app/model/Image.model';
-import { WebsocketService } from './websocket.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,7 @@ import { WebsocketService } from './websocket.service';
 export class FileService {
   private URL_BACKEND: string = environment.urlBack;
 
-  constructor(private http: HttpClient, private wsService: WebsocketService) {}
+  constructor(private http: HttpClient) {}
 
   /**
    * CREATE ONE
@@ -24,7 +23,6 @@ export class FileService {
   public saveFile(blob: Blob, fileName: string): Observable<any> {
     const formData: FormData = new FormData();
     formData.append('file', blob, fileName);
-    this.wsService.onPublish(fileName);
     return this.http.post<Image>(`${this.URL_BACKEND}/uploadFile`, formData);
   }
 
@@ -38,6 +36,13 @@ export class FileService {
     return this.http.get<Image[]>(`${this.URL_BACKEND}/liste`);
   }
 
+  /**
+   * DELETE ONE
+   *
+   * @param {number} id
+   * @return {*}  {Observable<any>}
+   * @memberof FileService
+   */
   public deleteFile(id: number): Observable<any> {
     return this.http.delete(`${this.URL_BACKEND}/${id}`);
   }

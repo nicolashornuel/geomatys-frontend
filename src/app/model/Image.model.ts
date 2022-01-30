@@ -1,6 +1,6 @@
 export interface Image {
     data: Blob;
-    fileName: string;
-    fileType: string;
+    name: string;
+    type: string;
     id: number;
   }

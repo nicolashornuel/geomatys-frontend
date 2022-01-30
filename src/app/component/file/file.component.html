@@ -1,5 +1,5 @@
 <section class="column">
-    <button type="button" class="btn btn-primary" (click)="input.click()">Choose file</button>
+  <button type="button" class="btn btn-primary" (click)="input.click()">Choose file</button>
   <input #input type="file" id="img" name="img" accept="image/*" (change)="handleFileInput($event)" />
   <div class="canvas-container">
     <canvas #canvasImage id="canvasImage" style="border: 2px solid"> </canvas>
@@ -14,15 +14,21 @@
     </canvas>
   </div>
   <div>
-    <button type="button" class="btn btn-secondary m-2" (click)="cancel()" [disabled]="!rectIsSet || !file">Cancel</button>
-    <button type="button" class="btn btn-primary m-2" (click)="crop()" [disabled]="!rectIsSet || !file">Apply crop</button>
-    <button type="button" class="btn btn-success m-2" (click)="save()" [disabled]="!image.src || !file">Save</button>
+    <button type="button" class="btn btn-secondary m-2" (click)="cancel()" [disabled]="!rectIsSet || !file">
+      Cancel
+    </button>
+    <button type="button" class="btn btn-primary m-2" (click)="crop()" [disabled]="!rectIsSet || !file">
+      Apply crop
+    </button>
+    <button type="button" class="btn btn-success m-2" (click)="save()" [disabled]="!imageInputFile.src || !file">
+      Save
+    </button>
   </div>
   <section *ngIf="imagesSave.length > 0" class="m-2 column">
     <h4 class="card-title">Liste</h4>
     <div class="row">
-      <div *ngFor="let image of imagesSave" class="card m-2" style="width: 10rem;">
-        <img class="card-img-top" [src]="image.src" alt="Card image cap">
+      <div *ngFor="let image of imagesSave" class="card m-2" style="width: 10rem">
+        <img class="card-img-top" [src]="image.src" alt="Card image cap" />
         <div class="card-body d-flex flex-column justify-content-between">
           <h5 class="card-title">Id : {{ image.id }}</h5>
           <p class="card-text">Name file : {{ image.name }}</p>
@@ -32,6 +38,4 @@
     </div>
   </section>
 </section>
-
-
-
+<section id="insert"></section>
