@@ -1,15 +1,17 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FileService} from 'src/app/service/file.service';
-import {take} from 'rxjs/operators';
+import {take, takeUntil} from 'rxjs/operators';
 import {Image} from 'src/app/model/Image.model';
 import {CanvasService} from 'src/app/service/canvas.service';
 import {Position} from 'src/app/model/Position.model';
 import {Size} from 'src/app/model/Size.model';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {WebsocketService} from 'src/app/service/websocket.service';
-import { Message } from 'stompjs';
+import { Message } from '@stomp/stompjs';
+
 import { AlertBarComponent } from '../alert-bar/alert-bar.component';
 import {EventBrokerType} from 'src/app/model/EventBrockerType.enum'
+import { DestroyService } from 'src/app/service/destroy.service';
 
 @Component({
   selector: 'app-file',
@@ -39,7 +41,8 @@ export class FileComponent implements OnInit, AfterViewInit {
     private canvasService: CanvasService,
     private sanitizer: DomSanitizer,
     private ws: WebsocketService,
-    private alert: AlertBarComponent
+    private alert: AlertBarComponent,
+    private destroy$: DestroyService
   ) {}
 
   /**
@@ -53,8 +56,14 @@ export class FileComponent implements OnInit, AfterViewInit {
     this.listenServer();
   }
 
+  /**
+   * listen websocket
+   *
+   * @private
+   * @memberof FileComponent
+   */
   private listenServer(): void {
-    this.ws.onEvent().subscribe((message: Message) => {
+    this.ws.onEvent().pipe(takeUntil(this.destroy$)).subscribe((message: Message) => {
       const msg = JSON.parse(message.body);
       if (msg.event === EventBrokerType.CREATE) {
         this.alert.info(`New File uploaded at ${msg.time}`, `File name : ${msg.content}`);
@@ -72,7 +81,8 @@ export class FileComponent implements OnInit, AfterViewInit {
    * @memberof FileComponent
    */
   private initializeList(): void {
-    this.fileService.getFiles().subscribe((images: Image[]) => {
+    this.fileService.getFiles().pipe(take(1)).subscribe((images: Image[]) => {
+      this.imagesSave = [];
       images.forEach((image: Image) => this.pushImg(image));
     });
   }
