@@ -1,0 +1,2241 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>geomatys-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">geomatys-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  FileComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/component/file/file.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-file</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./file.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./file.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#canvasCursor" >canvasCursor</a>
+                            </li>
+                            <li>
+                                <a href="#canvasImage" >canvasImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ctxCursor" >ctxCursor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ctxImage" >ctxImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#file" >file</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#imageInputFile" >imageInputFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#imagesSave" >imagesSave</a>
+                            </li>
+                            <li>
+                                <a href="#input" >input</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#MAX_HEIGHT" >MAX_HEIGHT</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#MAX_WIDTH" >MAX_WIDTH</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#moving" >moving</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#position" >position</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ratioHeight" >ratioHeight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ratioWidth" >ratioWidth</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#rectIsSet" >rectIsSet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#size" >size</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#cancel" >cancel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#crop" >crop</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#delete" >delete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#drawRect" >drawRect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getRatio" >getRatio</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleFileInput" >handleFileInput</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initializeList" >initializeList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#listenServer" >listenServer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#mousedown" >mousedown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#mouseup" >mouseup</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#pushImg" >pushImg</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#save" >save</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sizeLogic" >sizeLogic</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fileService: <a href="../injectables/FileService.html" target="_self">FileService</a>, canvasService: <a href="../injectables/CanvasService.html" target="_self">CanvasService</a>, sanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>, ws: <a href="../injectables/WebsocketService.html" target="_self">WebsocketService</a>, alert: <a href="../components/AlertBarComponent.html" target="_self">AlertBarComponent</a>, destroy$: <a href="../injectables/DestroyService.html" target="_self">DestroyService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/component/file/file.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FileService.html" target="_self" >FileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>canvasService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CanvasService.html" target="_self" >CanvasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sanitizer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ws</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WebsocketService.html" target="_self" >WebsocketService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alert</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../components/AlertBarComponent.html" target="_self" >AlertBarComponent</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>destroy$</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DestroyService.html" target="_self" >DestroyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancel"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>cancel</b></span>
+                        <a href="#cancel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>cancel()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="229"
+                            class="link-to-prism">src/app/component/file/file.component.ts:229</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onClick cancel button</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crop"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>crop</b></span>
+                        <a href="#crop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>crop()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="207"
+                            class="link-to-prism">src/app/component/file/file.component.ts:207</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onClick crop button</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>delete</b></span>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="278"
+                            class="link-to-prism">src/app/component/file/file.component.ts:278</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onClick delete button</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="drawRect"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>drawRect</b></span>
+                        <a href="#drawRect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>drawRect(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="179"
+                            class="link-to-prism">src/app/component/file/file.component.ts:179</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onMousemove drawn rectangle</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRatio"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getRatio</b></span>
+                        <a href="#getRatio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRatio()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="198"
+                            class="link-to-prism">src/app/component/file/file.component.ts:198</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>get Ratio image inside canvas</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>{number}</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleFileInput"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>handleFileInput</b></span>
+                        <a href="#handleFileInput"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleFileInput(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">src/app/component/file/file.component.ts:106</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Behavior change input type=&#39;file&#39;</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeList"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>initializeList</b></span>
+                        <a href="#initializeList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initializeList()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/component/file/file.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>fetch all files saved to display cards</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listenServer"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>listenServer</b></span>
+                        <a href="#listenServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>listenServer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/component/file/file.component.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>listen websocket</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mousedown"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>mousedown</b></span>
+                        <a href="#mousedown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mousedown(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">src/app/component/file/file.component.ts:157</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onClick DOWN set origin position</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mouseup"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>mouseup</b></span>
+                        <a href="#mouseup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mouseup(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">src/app/component/file/file.component.ts:168</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onClick UP rectangle is ready</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/app/component/file/file.component.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initialize canvas context</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/component/file/file.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initialize a new Image</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pushImg"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>pushImg</b></span>
+                        <a href="#pushImg"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>pushImg(image: <a href="../interfaces/Image.html" target="_self">Image</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="262"
+                            class="link-to-prism">src/app/component/file/file.component.ts:262</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>insert new Image to display array</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>image</td>
+                                    <td>
+                                                <code><a href="../interfaces/Image.html" target="_self" >Image</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="save"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>save</b></span>
+                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>save()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="241"
+                            class="link-to-prism">src/app/component/file/file.component.ts:241</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onClick save button</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sizeLogic"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>sizeLogic</b></span>
+                        <a href="#sizeLogic"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sizeLogic(width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/app/component/file/file.component.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set size canvas by image ratio</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>width</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>height</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>{*}</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canvasCursor"></a>
+                    <span class="name">
+                        <span ><b>canvasCursor</b></span>
+                        <a href="#canvasCursor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ElementRef&lt;HTMLCanvasElement&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;canvasCursor&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/component/file/file.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canvasImage"></a>
+                    <span class="name">
+                        <span ><b>canvasImage</b></span>
+                        <a href="#canvasImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ElementRef&lt;HTMLCanvasElement&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;canvasImage&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/component/file/file.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ctxCursor"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>ctxCursor</b></span>
+                        <a href="#ctxCursor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>CanvasRenderingContext2D | null</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/component/file/file.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ctxImage"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>ctxImage</b></span>
+                        <a href="#ctxImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>CanvasRenderingContext2D | null</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/component/file/file.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="file"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>file</b></span>
+                        <a href="#file"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>File | undefined</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/component/file/file.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imageInputFile"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>imageInputFile</b></span>
+                        <a href="#imageInputFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Image.html" target="_self" >HTMLImageElement</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/component/file/file.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imagesSave"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>imagesSave</b></span>
+                        <a href="#imagesSave"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/component/file/file.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="input"></a>
+                    <span class="name">
+                        <span ><b>input</b></span>
+                        <a href="#input"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ElementRef&lt;HTMLInputElement&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;input&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/component/file/file.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="MAX_HEIGHT"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>MAX_HEIGHT</b></span>
+                        <a href="#MAX_HEIGHT"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>500</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/component/file/file.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="MAX_WIDTH"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>MAX_WIDTH</b></span>
+                        <a href="#MAX_WIDTH"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>500</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/component/file/file.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moving"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>moving</b></span>
+                        <a href="#moving"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/component/file/file.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="position"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>position</b></span>
+                        <a href="#position"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Position.html" target="_self" >Position</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/component/file/file.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ratioHeight"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>ratioHeight</b></span>
+                        <a href="#ratioHeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/component/file/file.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ratioWidth"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>ratioWidth</b></span>
+                        <a href="#ratioWidth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/component/file/file.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rectIsSet"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>rectIsSet</b></span>
+                        <a href="#rectIsSet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/component/file/file.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="size"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>size</b></span>
+                        <a href="#size"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Size.html" target="_self" >Size</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/component/file/file.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from &#x27;@angular/core&#x27;;
+import {FileService} from &#x27;src/app/service/file.service&#x27;;
+import {take, takeUntil} from &#x27;rxjs/operators&#x27;;
+import {Image} from &#x27;src/app/model/Image.model&#x27;;
+import {CanvasService} from &#x27;src/app/service/canvas.service&#x27;;
+import {Position} from &#x27;src/app/model/Position.model&#x27;;
+import {Size} from &#x27;src/app/model/Size.model&#x27;;
+import {DomSanitizer, SafeUrl} from &#x27;@angular/platform-browser&#x27;;
+import {WebsocketService} from &#x27;src/app/service/websocket.service&#x27;;
+import { Message } from &#x27;@stomp/stompjs&#x27;;
+
+import { AlertBarComponent } from &#x27;../alert-bar/alert-bar.component&#x27;;
+import {EventBrokerType} from &#x27;src/app/model/EventBrockerType.enum&#x27;
+import { DestroyService } from &#x27;src/app/service/destroy.service&#x27;;
+
+@Component({
+  selector: &#x27;app-file&#x27;,
+  templateUrl: &#x27;./file.component.html&#x27;,
+  styleUrls: [&#x27;./file.component.scss&#x27;]
+})
+export class FileComponent implements OnInit, AfterViewInit {
+  @ViewChild(&#x27;input&#x27;) input!: ElementRef&lt;HTMLInputElement&gt;;
+  @ViewChild(&#x27;canvasImage&#x27;) canvasImage!: ElementRef&lt;HTMLCanvasElement&gt;;
+  @ViewChild(&#x27;canvasCursor&#x27;) canvasCursor!: ElementRef&lt;HTMLCanvasElement&gt;;
+  private ctxImage!: CanvasRenderingContext2D | null;
+  private ctxCursor!: CanvasRenderingContext2D | null;
+  public file: File | undefined;
+  public imageInputFile!: HTMLImageElement;
+  public moving: boolean &#x3D; false;
+  public rectIsSet: boolean &#x3D; false;
+  private MAX_WIDTH: number &#x3D; 500;
+  private MAX_HEIGHT: number &#x3D; 500;
+  private ratioWidth: number &#x3D; 1;
+  private ratioHeight: number &#x3D; 1;
+  private position!: Position;
+  private size!: Size;
+  public imagesSave: any[] &#x3D; [];
+
+  constructor(
+    private fileService: FileService,
+    private canvasService: CanvasService,
+    private sanitizer: DomSanitizer,
+    private ws: WebsocketService,
+    private alert: AlertBarComponent,
+    private destroy$: DestroyService
+  ) {}
+
+  /**
+   * Initialize a new Image
+   *
+   * @memberof FileComponent
+   */
+  ngOnInit(): void {
+    this.imageInputFile &#x3D; new Image();
+    this.initializeList();
+    this.listenServer();
+  }
+
+  /**
+   * listen websocket
+   *
+   * @private
+   * @memberof FileComponent
+   */
+  private listenServer(): void {
+    this.ws.onEvent().pipe(takeUntil(this.destroy$)).subscribe((message: Message) &#x3D;&gt; {
+      const msg &#x3D; JSON.parse(message.body);
+      if (msg.event &#x3D;&#x3D;&#x3D; EventBrokerType.CREATE) {
+        this.alert.info(&#x60;New File uploaded at ${msg.time}&#x60;, &#x60;File name : ${msg.content}&#x60;);
+      } else if (msg.event &#x3D;&#x3D;&#x3D; EventBrokerType.DELETE) {
+        this.alert.danger(&#x60;New File deleted at ${msg.time}&#x60;, &#x60;File id : ${msg.content}&#x60;);
+      }
+      this.initializeList()
+    });
+  }
+
+  /**
+   * fetch all files saved to display cards
+   *
+   * @private
+   * @memberof FileComponent
+   */
+  private initializeList(): void {
+    this.fileService.getFiles().pipe(take(1)).subscribe((images: Image[]) &#x3D;&gt; {
+      this.imagesSave &#x3D; [];
+      images.forEach((image: Image) &#x3D;&gt; this.pushImg(image));
+    });
+  }
+
+  /**
+   * Initialize canvas context
+   *
+   * @memberof FileComponent
+   */
+  ngAfterViewInit(): void {
+    this.ctxImage &#x3D; this.canvasImage.nativeElement.getContext(&#x27;2d&#x27;);
+    this.ctxCursor &#x3D; this.canvasCursor.nativeElement.getContext(&#x27;2d&#x27;);
+  }
+
+  /**
+   * Behavior change input type&#x3D;&#x27;file&#x27;
+   *
+   * @param {*} e
+   * @memberof FileComponent
+   */
+  public handleFileInput(e: any): void {
+    if (e.target.files.length &gt; 0) {
+      this.canvasService.clear([this.canvasImage, this.canvasCursor]);
+      this.rectIsSet &#x3D; false;
+      const files: FileList &#x3D; e.target.files;
+      this.file &#x3D; files.item(0)!;
+      this.imageInputFile.src &#x3D; URL.createObjectURL(files[0]);
+      this.imageInputFile.onload &#x3D; () &#x3D;&gt; {
+        const size &#x3D; this.sizeLogic(this.imageInputFile.width, this.imageInputFile.height);
+        this.ctxImage!.drawImage(this.imageInputFile, 0, 0, size.w, size.h);
+      };
+    }
+  }
+
+  /**
+   * Set size canvas by image ratio
+   *
+   * @private
+   * @param {number} width
+   * @param {number} height
+   * @return {*}  {*}
+   * @memberof FileComponent
+   */
+  private sizeLogic(width: number, height: number): any {
+    this.ratioWidth &#x3D; 1;
+    this.ratioHeight &#x3D; 1;
+    if (width &gt; height) {
+      this.ratioHeight &#x3D; this.MAX_WIDTH / width;
+      height &#x3D; height * this.ratioHeight;
+      width &#x3D; this.MAX_WIDTH;
+    } else {
+      this.ratioWidth &#x3D; this.MAX_HEIGHT / height;
+      width &#x3D; width * this.ratioWidth;
+      height &#x3D; this.MAX_HEIGHT;
+    }
+    this.canvasImage.nativeElement.width &#x3D; width;
+    this.canvasImage.nativeElement.height &#x3D; height;
+    this.canvasCursor.nativeElement.width &#x3D; width;
+    this.canvasCursor.nativeElement.height &#x3D; height;
+    return {
+      w: width,
+      h: height
+    };
+  }
+
+  /**
+   * onClick DOWN set origin position
+   *
+   * @param {*} e
+   * @memberof FileComponent
+   */
+  public mousedown(e: any): void {
+    this.position &#x3D; this.canvasService.getCursorPosition(e, this.canvasCursor);
+    this.moving &#x3D; true;
+  }
+
+  /**
+   * onClick UP rectangle is ready
+   *
+   * @param {*} e
+   * @memberof FileComponent
+   */
+  public mouseup(e: any): void {
+    this.moving &#x3D; false;
+    this.rectIsSet &#x3D; true;
+  }
+
+  /**
+   * onMousemove drawn rectangle
+   *
+   * @param {*} e
+   * @memberof FileComponent
+   */
+  public drawRect(e: any): void {
+    if (this.moving) {
+      const endPosition: Position &#x3D; this.canvasService.getCursorPosition(e, this.canvasCursor);
+      if (endPosition.x &gt; this.position.x &amp;&amp; endPosition.y &gt; this.position.y) {
+        this.canvasService.clear([this.canvasCursor]);
+        this.size &#x3D; this.canvasService.getSize(endPosition, this.position);
+        this.ctxCursor!.strokeStyle &#x3D; &#x27;green&#x27;;
+        this.ctxCursor!.strokeRect(this.position.x, this.position.y, this.size.w, this.size.h);
+      }
+    }
+  }
+
+  /**
+   * get Ratio image inside canvas
+   *
+   * @private
+   * @return {*}  {number}
+   * @memberof FileComponent
+   */
+  private getRatio(): number {
+    return this.ratioWidth &#x3D;&#x3D;&#x3D; 1 ? 1 / this.ratioHeight : 1 / this.ratioWidth;
+  }
+
+  /**
+   * onClick crop button
+   *
+   * @memberof FileComponent
+   */
+  public crop(): void {
+    this.canvasService.clear([this.canvasImage, this.canvasCursor]);
+    const ratio &#x3D; this.getRatio();
+    const size: Size &#x3D; this.sizeLogic(this.size.w * ratio, this.size.h * ratio);
+    this.ctxImage!.drawImage(
+      this.imageInputFile,
+      this.position.x * ratio,
+      this.position.y * ratio,
+      this.size.w * ratio,
+      this.size.h * ratio,
+      0,
+      0,
+      size.w,
+      size.h
+    );
+  }
+
+  /**
+   * onClick cancel button
+   *
+   * @memberof FileComponent
+   */
+  public cancel(): void {
+    this.canvasService.clear([this.canvasCursor]);
+    const size &#x3D; this.sizeLogic(this.imageInputFile.width, this.imageInputFile.height);
+    this.ctxImage!.drawImage(this.imageInputFile, 0, 0, size.w, size.h);
+    this.rectIsSet &#x3D; false;
+  }
+
+  /**
+   * onClick save button
+   *
+   * @memberof FileComponent
+   */
+  public save(): void {
+    this.canvasImage.nativeElement.toBlob((blob: Blob | null) &#x3D;&gt; {
+      this.fileService
+        .saveFile(blob!, this.file!.name)
+        .pipe(take(1))
+        .subscribe((image: Image) &#x3D;&gt; {
+          this.ws.onPublish(JSON.stringify({event: EventBrokerType.CREATE, content:image.name}));
+          this.input.nativeElement.value &#x3D; &#x27;&#x27;;
+          this.canvasService.clear([this.canvasImage]);
+          this.pushImg(image);
+        });
+    });
+  }
+
+  /**
+   * insert new Image to display array
+   *
+   * @private
+   * @param {Image} image
+   * @memberof FileComponent
+   */
+  private pushImg(image: Image): void {
+    const src: string &#x3D; &#x27;data:image/png;base64,&#x27; + image.data;
+    const srcSafe: SafeUrl &#x3D; this.sanitizer.bypassSecurityTrustUrl(src);
+    this.imagesSave.push({
+      id: image.id,
+      name: image.name,
+      src: srcSafe
+    });
+  }
+
+  /**
+   * onClick delete button
+   *
+   * @param {number} id
+   * @memberof FileComponent
+   */
+  public delete(id: number): void {
+    this.fileService
+      .deleteFile(id)
+      .pipe(take(1))
+      .subscribe(() &#x3D;&gt; {
+        this.ws.onPublish(JSON.stringify({event: EventBrokerType.DELETE, content:id}));
+        this.imagesSave.forEach((image: Image, index: number) &#x3D;&gt; {
+          if (image.id &#x3D;&#x3D;&#x3D; id) this.imagesSave.splice(index, 1);
+        });
+      });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;column&quot;&gt;
+  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;input.click()&quot;&gt;Choose file&lt;/button&gt;
+  &lt;input #input type&#x3D;&quot;file&quot; id&#x3D;&quot;img&quot; name&#x3D;&quot;img&quot; accept&#x3D;&quot;image/*&quot; (change)&#x3D;&quot;handleFileInput($event)&quot; /&gt;
+  &lt;div class&#x3D;&quot;canvas-container&quot;&gt;
+    &lt;canvas #canvasImage id&#x3D;&quot;canvasImage&quot; style&#x3D;&quot;border: 2px solid&quot;&gt; &lt;/canvas&gt;
+    &lt;canvas
+      #canvasCursor
+      id&#x3D;&quot;canvasCursor&quot;
+      (mousedown)&#x3D;&quot;mousedown($event)&quot;
+      (mouseup)&#x3D;&quot;mouseup($event)&quot;
+      (mousemove)&#x3D;&quot;drawRect($event)&quot;
+      style&#x3D;&quot;border: 2px solid&quot;
+    &gt;
+    &lt;/canvas&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary m-2&quot; (click)&#x3D;&quot;cancel()&quot; [disabled]&#x3D;&quot;!rectIsSet || !file&quot;&gt;
+      Cancel
+    &lt;/button&gt;
+    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary m-2&quot; (click)&#x3D;&quot;crop()&quot; [disabled]&#x3D;&quot;!rectIsSet || !file&quot;&gt;
+      Apply crop
+    &lt;/button&gt;
+    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-success m-2&quot; (click)&#x3D;&quot;save()&quot; [disabled]&#x3D;&quot;!imageInputFile.src || !file&quot;&gt;
+      Save
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;section *ngIf&#x3D;&quot;imagesSave.length &gt; 0&quot; class&#x3D;&quot;m-2 column&quot;&gt;
+    &lt;h4 class&#x3D;&quot;card-title&quot;&gt;Liste&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let image of imagesSave&quot; class&#x3D;&quot;card m-2&quot; style&#x3D;&quot;width: 10rem&quot;&gt;
+        &lt;img class&#x3D;&quot;card-img-top&quot; [src]&#x3D;&quot;image.src&quot; alt&#x3D;&quot;Card image cap&quot; /&gt;
+        &lt;div class&#x3D;&quot;card-body d-flex flex-column justify-content-between&quot;&gt;
+          &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Id : {{ image.id }}&lt;/h5&gt;
+          &lt;p class&#x3D;&quot;card-text&quot;&gt;Name file : {{ image.name }}&lt;/p&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;delete(image.id)&quot;&gt;Delete&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+&lt;section id&#x3D;&quot;insert&quot;&gt;&lt;/section&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./file.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+input#img {
+  text-align: center;
+  &amp;::-webkit-file-upload-button {
+    display: none;
+  }
+}
+.canvas-container {
+  position: relative;
+  #canvasImage {
+    position: absolute;
+  }
+  #canvasCursor {
+    position: relative;
+  }
+}
+#insert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section class="column">  <button type="button" class="btn btn-primary" (click)="input.click()">Choose file</button>  <input #input type="file" id="img" name="img" accept="image/*" (change)="handleFileInput($event)" />  <div class="canvas-container">    <canvas #canvasImage id="canvasImage" style="border: 2px solid"> </canvas>    <canvas      #canvasCursor      id="canvasCursor"      (mousedown)="mousedown($event)"      (mouseup)="mouseup($event)"      (mousemove)="drawRect($event)"      style="border: 2px solid"    >    </canvas>  </div>  <div>    <button type="button" class="btn btn-secondary m-2" (click)="cancel()" [disabled]="!rectIsSet || !file">      Cancel    </button>    <button type="button" class="btn btn-primary m-2" (click)="crop()" [disabled]="!rectIsSet || !file">      Apply crop    </button>    <button type="button" class="btn btn-success m-2" (click)="save()" [disabled]="!imageInputFile.src || !file">      Save    </button>  </div>  <section *ngIf="imagesSave.length > 0" class="m-2 column">    <h4 class="card-title">Liste</h4>    <div class="row">      <div *ngFor="let image of imagesSave" class="card m-2" style="width: 10rem">        <img class="card-img-top" [src]="image.src" alt="Card image cap" />        <div class="card-body d-flex flex-column justify-content-between">          <h5 class="card-title">Id : {{ image.id }}</h5>          <p class="card-text">Name file : {{ image.name }}</p>          <button type="button" class="btn btn-danger" (click)="delete(image.id)">Delete</button>        </div>      </div>    </div>  </section></section><section id="insert"></section></div>'
+    var COMPONENTS = [{'name': 'AlertBarComponent', 'selector': 'app-alert-bar'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'FileComponent', 'selector': 'app-file'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FileComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FileComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
