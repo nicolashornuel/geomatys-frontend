@@ -25,3 +25,37 @@ input#img {
   top: 20px;
   right: 20px;
 }
+
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.125em;
+  border: 0.25em solid currentcolor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: 0.75s linear infinite spinner-border;
+}
+
+.iframe {
+  top:5vh;
+  left:5vw;
+  width:90vw;
+  height:90vh;
+}
+.close {
+  top: -15px;
+  right: -15px;
+  background-color: #dee2e6;
+  z-index: 2;
+  border-radius: 50%;
+  opacity: 1;
+  height: 32px;
+  width: 32px;
+}
+
+@keyframes spinner-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}

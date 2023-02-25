@@ -1,17 +1,18 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {FileService} from 'src/app/service/file.service';
-import {take, takeUntil} from 'rxjs/operators';
-import {Image} from 'src/app/model/Image.model';
-import {CanvasService} from 'src/app/service/canvas.service';
-import {Position} from 'src/app/model/Position.model';
-import {Size} from 'src/app/model/Size.model';
-import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
-import {WebsocketService} from 'src/app/service/websocket.service';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { Message } from '@stomp/stompjs';
+import { take, takeUntil } from 'rxjs/operators';
+import { Image } from 'src/app/model/Image.model';
+import { Position } from 'src/app/model/Position.model';
+import { Size } from 'src/app/model/Size.model';
+import { CanvasService } from 'src/app/service/canvas.service';
+import { FileService } from 'src/app/service/file.service';
+import { WebsocketService } from 'src/app/service/websocket.service';
 
-import { AlertBarComponent } from '../alert-bar/alert-bar.component';
-import {EventBrokerType} from 'src/app/model/EventBrockerType.enum'
+import { EventBrokerType } from 'src/app/model/EventBrockerType.enum';
 import { DestroyService } from 'src/app/service/destroy.service';
+import { AlertBarComponent } from '../alert-bar/alert-bar.component';
+import {environment} from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-file',
@@ -35,6 +36,8 @@ export class FileComponent implements OnInit, AfterViewInit {
   private position!: Position;
   private size!: Size;
   public imagesSave: any[] = [];
+  public navTarget: 'list' | 'doc' = 'list';
+  public swaggerUi = this.sanitizer.bypassSecurityTrustResourceUrl(`${environment.urlBack}/swagger-ui/index.html`);
 
   constructor(
     private fileService: FileService,
@@ -286,4 +289,5 @@ export class FileComponent implements OnInit, AfterViewInit {
         });
       });
   }
+
 }

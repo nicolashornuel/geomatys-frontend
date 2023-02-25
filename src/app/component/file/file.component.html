@@ -24,18 +24,50 @@
       Save
     </button>
   </div>
-  <section *ngIf="imagesSave.length > 0" class="m-2 column">
-    <h4 class="card-title">Liste</h4>
-    <div class="row">
-      <div *ngFor="let image of imagesSave" class="card m-2" style="width: 10rem">
-        <img class="card-img-top" [src]="image.src" alt="Card image cap" />
-        <div class="card-body d-flex flex-column justify-content-between">
-          <h5 class="card-title">Id : {{ image.id }}</h5>
-          <p class="card-text">Name file : {{ image.name }}</p>
-          <button type="button" class="btn btn-danger" (click)="delete(image.id)">Delete</button>
-        </div>
+  <section class="m-2 column">
+    <ng-container *ngIf="imagesSave.length > 0; else spinner">
+      <ul class="nav nav-tabs w-100">
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="navTarget === 'list' ? 'active' : 'text-primary'" (click)="navTarget = 'list'">Liste</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="navTarget === 'doc' ? 'active' : 'text-primary'" (click)="navTarget = 'doc'" >Swagger v2 Doc</a>
+        </li>
+      </ul>
+      <div class="d-flex flex-wrap justify-content-between">
+        <ng-container [ngSwitch]="navTarget">
+          <ng-container *ngSwitchCase="'list'" [ngTemplateOutlet]="list"></ng-container>
+          <ng-container *ngSwitchCase="'doc'" [ngTemplateOutlet]="doc"></ng-container>
+        </ng-container>
+      </div>
+    </ng-container>
+  </section>
+
+  <ng-template #spinner>
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="spinner-border"></div>
+    </div>
+  </ng-template>
+
+  <ng-template #list>
+    <div *ngFor="let image of imagesSave" class="card m-2" style="width: 10rem">
+      <img class="card-img-top" [src]="image.src" alt="Card image cap" />
+      <div class="card-body d-flex flex-column justify-content-between">
+        <h5 class="card-title">Id : {{ image.id }}</h5>
+        <p class="card-text">Name file : {{ image.name }}</p>
+        <button type="button" class="btn btn-danger" (click)="delete(image.id)">Delete</button>
       </div>
     </div>
-  </section>
+  </ng-template>
+  
+  <ng-template #doc>
+    <div class="iframe shadow position-fixed rounded">
+      <button type="button" class="close position-absolute" aria-label="Close" (click)="navTarget = 'list'">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <iframe class="iframe position-fixed" [src]="swaggerUi" frameborder="0"></iframe>
+    </div>
+  </ng-template>
+  
 </section>
 <section id="insert"></section>
