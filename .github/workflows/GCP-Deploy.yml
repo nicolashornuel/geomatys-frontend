@@ -1,0 +1,36 @@
+run-name: Build and Deploy
+name: Deploy Angular App to Cloud Run
+'on':
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: Build Docker Container and Deploy to Cloud Run
+    env:
+        IMAGE_NAME: ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPO_NAME }}/${{ secrets.GCP_APP_NAME }}
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        - name: Use Node.js v12
+          uses: actions/setup-node@v3
+          with:
+            node-version: 12
+        - name: Install node_modules and build app
+          run: npm ci && npm run build
+
+        - id: 'auth'
+          uses: 'google-github-actions/auth@v1'
+          with:
+            credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+        - name: 'Use gcloud CLI'
+          run: 'gcloud info'
+        - name: Configure Docker with gcloud
+          run: gcloud auth configure-docker ${{ secrets.GCP_REGION }}-docker.pkg.dev --quiet
+        - name: Build Docker image
+          run: docker build . -t $IMAGE_NAME
+        - name: Push Docker image
+          run: docker push $IMAGE_NAME
+        - name: Deploy Docker image
+          run: gcloud run deploy ${{ secrets.GCP_APP_NAME }} --image $IMAGE_NAME --region ${{ secrets.GCP_REGION }} --platform managed --port 80
